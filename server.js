@@ -20,6 +20,7 @@ app.get( '/users', async (req,res) => {
     }
     catch(err)
     {
+        console.error('DB error:', err);
         res.status(500).json({error:'Failed to fetch users.'})
     }
 })
